@@ -1,3 +1,10 @@
+import shadow.bundletool.com.android.ddmlib.Log
+import java.util.Properties
+
+val localProps = Properties()
+val localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) { localProps.load(localPropsFile.inputStream()) }
+
 plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.android.application)
@@ -20,7 +27,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders["mapsApiKey"] = project.findProperty("MAPS_API_KEY") as? String ?: ""
+        manifestPlaceholders["mapsApiKey"] = localProps.getProperty("MAPS_API_KEY") ?: ""
     }
 
     buildTypes {
