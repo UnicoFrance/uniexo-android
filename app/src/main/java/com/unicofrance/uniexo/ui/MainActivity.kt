@@ -19,9 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GoogleMapScreen(
                 modifier = Modifier.fillMaxSize(),
-                viewModel = GoogleMapViewModel(
-                    userRepository = app.userRepository
-                )
+                viewModel = GoogleMapViewModel(userRepository = app.userRepository)
             )
         }
     }

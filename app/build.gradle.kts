@@ -71,5 +71,8 @@ dependencies {
     implementation(libs.maps.compose)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.retrofit.adapters.result)
     ksp(libs.androidx.room.compiler)
 }
