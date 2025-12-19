@@ -68,6 +68,8 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.svg)
     implementation(libs.maps.compose)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)
